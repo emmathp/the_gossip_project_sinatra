@@ -7,9 +7,9 @@
     <h3>Page du potin numéro : <%= params['id'] %></h3>
     <p> 
     #on cherche l'id en integer, on affiche l'auteur et le contenu de l'id.
-      <% gossip_found = Gossip.find(params['id'].to_i) %>
-      <% gossip_author = gossip_found[0] %>
-      <% gossip_content = gossip_found[1] %>
+      <% gossip_id = Gossip.find(params['id'].to_i) %>
+      <% gossip_author = gossip_id[0] %>
+      <% gossip_content = gossip_id[1] %>
 
       auteur : <%= gossip_author %> </br>
       contenu : <%= gossip_content %> </br>
